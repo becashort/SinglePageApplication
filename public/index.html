@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+    <head>
+        
+        
+        <title>Short-Span : Your main source of technology</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Device set up -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        
+        <!-- ajax/jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        
+            <script>
+
+                 $(document).ready(function(){
+                     $("#lap&phone").click(function(){
+                    $("#content").load("/lap&phone");
+                });
+                });
+
+            </script>
+        
+            <script>
+
+             <!-- $(document).ready(function(){ -->
+                     <!-- $("#virtual").click(function(){ -->
+                    <!-- $("#content").load("/virtual"); -->
+                <!-- }); -->
+                <!-- });   -->
+				
+		$(document).ready(function(){
+		$("#virtual").click(function(){
+       $.get("/virtual", function(data, status){
+		$("#content").html(data);
+        });
+    });
+});
+
+            </script>
+        
+            <script>
+
+                 $(document).ready(function(){
+                     $("#drones").click(function(){
+                    $("#content").load("/drones");
+                });
+                });
+
+            </script>
+        
+            
+            
+
+        
+    </head>
+
+<!-- 
+name in bold 3d writing top left corner - photoshop
+
+<img src=".jpg" class="img-circle" alt="mainImage">
+-->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav">
+        
+      <li><button>Home</button></li>
+      <li class="active"><button>Phones & Laptops</button></li>
+      <li><a href="#">Drones</a></li>
+      <li class="active"><button type="button" id="virtual">Virtual Reality</button></li>
+    </ul>
+  </div>
+</nav>
+        
+        <body>
+    
+        <!-- main section -->
+        <div class="container">
+            <div class="jumbotron">
+                <div id="content">
+            
+                <!-- IMAGE -->
+                
+                
+                <h2>Do you want to see 2017's fastest and most powerful tech items before we hit the new year?</h2>
+                
+                <h3>We have taken a look at all the newest technology to hit the market this year as well as what to expect for 2018. Virtual Reality is hitting new markets and is being used for so much more than expected.</h3>
+            
+            </div>
+        </div>
+    
+    
+    
+        <div class="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.
+        </div>
+    
+            </div>
+    
+        </body>
+    
+    
+    
+    
+    
+</html>
