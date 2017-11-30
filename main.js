@@ -47,6 +47,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+//setting main root point
+app.get('/home', function(req, res) {
+	console.log("GET for home route point");
+    res.sendFile(path.join(__dirname + '/public/content/home.html'));
+}); 
+
 //setting up navbar root points - grades
 app.get('/grades', function(req, res) {
 	console.log("GET for /grades");
@@ -66,8 +72,19 @@ app.get('/pastWork', function(req, res) {
 });
 
 
+app.get('/hello/:name', function (req, res) {
+console.log(req.params.name);
+res.send('Hello ' + ' ' + req.params.name + '. Thank you for viewing my Eportfolio. I hope you enjoyed it, this text is produced via get request');
+})
 
-//read
+
+/* app.delete('/home', function (req, res) {
+res.redirect('/');
+}) */
+
+
+
+//read from db
 app.get('/technology', function(req,res){
 	BookData.find(function(err, reviews) {
                 if (err)
