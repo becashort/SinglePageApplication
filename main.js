@@ -1,38 +1,89 @@
+//setting up variables
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
+//adding database
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://admin:admin@ds121192.mlab.com:21192/books';
+mongoose.connect(mongoDB);
 
+
+//creating schema
+var Schema = mongoose.Schema;
+//define schema
+var bookSchema = new Schema({
+    //what information it can pull from the database
+    title: String,
+    description: String,
+    author: String
+})
+
+var BookData = mongoose.model('BookData', bookSchema);
+
+
+// var mongoDB = 'mongodb://becashort:cruisin33@ds161455.mlab.com:61455/information';
+// mongoose.connect(mongoDB);
+
+// var Schema = mongoose.Schema;
+// //define schema
+// var techSchema = new Schema({
+	 // type: String,
+    // model: String,
+    // colour: String
+// })
+
+// var Technology = mongoose.model('Technology', techSchema);
+
+// Create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false }) 
+
+//shows the application which folder to use
 app.use(express.static(path.join(__dirname, 'public')));
 
-//setting root point
+//setting main root point
 app.get('/', function(req, res) {
-	console.log("GET for /");
+	console.log("GET for / - home route point");
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-//setting up navbar root points - virtual
-app.get('/lap&phone', function(req, res) {
-	console.log("GET for /lap&phone");
-    res.sendFile(path.join(__dirname + '/public/content/lap&phone.html'));
+//setting up navbar root points - grades
+app.get('/grades', function(req, res) {
+	console.log("GET for /grades");
+    res.sendFile(path.join(__dirname + '/public/content/grades.html'));
 });
 
-//setting up navbar root points - phones & laptops
-app.get('/virtual', function(req, res) {
-	console.log("GET for /virtual");
-    res.sendFile(path.join(__dirname + '/public/content/virtual.html'));
+//setting up navbar root points - interests
+app.get('/interests', function(req, res) {
+	console.log("GET for /interests");
+    res.sendFile(path.join(__dirname + '/public/content/interests.html'));
 });
 
-//setting up navbar root points - drones
-app.get('/drones', function(req, res) {
-	console.log("GET for /drones");
-    res.sendFile(path.join(__dirname + '/drones.html'));
+//setting up navbar root points - past work
+app.get('/pastWork', function(req, res) {
+	console.log("GET for /pastWork");
+    res.sendFile(path.join(__dirname + '/public/content/pastWork.html'));
 });
+
+
+
+//read
+app.get('/technology', function(req,res){
+	BookData.find(function(err, reviews) {
+                if (err)
+                    res.send(err)
+                res.json(reviews);
+            });
+});
+
+
 
 
 
 //setting up server
 app.listen(8080);
 
+//setting up the :8081 of URL
 var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port

@@ -1,0 +1,258 @@
+  <!DOCTYPE html>
+
+    <head>
+        
+        
+        <title>Past Work </title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery / Ajax library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Device set up -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="../css/main.css">
+        
+        
+        
+          
+    
+    </head>
+
+
+        <!-- start of body -->
+        <body>
+    
+            
+            
+            <!-- line break -->
+            <br />
+            <br />
+            
+            
+            
+        <!-- main section -->
+        <div class="container">
+            <div class="jumbotron">
+                
+                
+                
+                <h2 align="center">Past Work</h2>
+                
+                <br />
+               
+
+                <!-- intro -->
+                <p>I have created multiple animations be it logos or gifs using the Adobe Suite. Take a look at those below.</p>
+                
+                
+                <!-- JQUERY to show/hide animate paragraph-->
+                    <script>
+                        $(document).ready(function(){
+                        $("#show").click(function(){
+                        $("#animate").show();
+                        });
+                        $("#hide").click(function(){
+                        $("#animate").hide();
+                            });
+                        });
+</script>
+                <!-- buttons for animation -->
+                <div align="center">
+                <button class="buttonBlue" id="hide">Hide Animations</button>
+                <button class="buttonBlue" id="show">Show Animations</button>
+                </div>
+          
+                <br />
+                
+                <!-- ANIMATIONS -->
+                <p id="animate">
+            
+               <video width="320" height="240" controls>
+                <source src="../img/MainLogo_3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <video width="320" height="240" controls>
+                <source src="../img/LogoFinished.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <video width="320" height="240" controls>
+                <source src="../img/face.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                </p>
+                
+            
+            </div>
+        </div>
+            
+            <!-- second section -->
+        <div class="container">
+            <div class="jumbotron">  
+                <h2 align="center">Job History</h2>
+                
+                
+            <!-- JQUERY to show duties - just changes text between div tags -->
+                <script>
+                    
+                    $(document).ready(function(){
+                        $("#buttonWeb").click(function(){
+                            $("#divWeb").text("I had to update and set sale prices prior to the sales. I was able to work remotely from home as well as in office to complete this work.");
+                                });
+                            });
+                </script>
+                
+                 <script>
+                    
+                    $(document).ready(function(){
+                        $("#buttonWait").click(function(){
+                            $("#divWait").text("I still work in this industry whilst in college as it is a lot more versatile and an easy way to keep fit without spending anything. I have worked in the same place for over 3 years.");
+                                });
+                            });
+                </script>
+                
+                <script>
+                    
+                    $(document).ready(function(){
+                        $("#buttonSales").click(function(){
+                            $("#divSales").text("Here I learned to speak with confidence and learnt how that people don't buy the product they buy the seller. I made great sales my first day too!");
+                                });
+                            });
+                </script>
+                
+                <script>
+                    
+                    $(document).ready(function(){
+                        $("#buttonPromot").click(function(){
+                            $("#divPromot").text("When I was younger I enjoyed promotion work, I haven't really been involved in too much lately but would love to again.");
+                                });
+                            });
+                </script>
+                
+                
+                <!-- start of FIRST row -->
+                <div class="row">
+                <div align="center" class="col-sm-6" style="background-color:lightgray;">
+                
+                
+                    <img src="../img/laptop.png" width="30%">
+                    
+                    
+                    <h2 align="center">Website Maintenance</h2>
+                <div align="center">   
+                    <button class="buttonBlue" id="buttonWeb">Show duties</button>
+                </div> 
+                <h4><div id="divWeb"> 
+                    
+                    <br />
+                    <br />
+                    
+                    </div></h4>
+                    
+                </div>  
+                
+            
+                <div align="center" class="col-sm-6" style="background-color:lightgray;"> 
+                    
+                                    
+                    <img src="../img/wait.png" width="30%">
+                    
+                    
+                    <h2 align="center">Waitressing</h2>
+                    <div align="center">  
+                <button class="buttonBlue" id="buttonWait">Show duties</button>
+                    </div>
+                <h4><div id="divWait"> 
+                    
+                    <br />
+                    <br />
+                    
+                    
+                    </div></h4>
+                </div>
+                <!-- end of row -->    
+                </div> 
+                
+                
+               <br />
+                
+                
+                <!-- start of SECOND row -->
+                <div class="row">
+                <div align="center" class="col-sm-6" style="background-color:lightgray;">
+                
+                
+                     <img src="../img/sales.png" width="30%">
+                    
+                    
+                    <h2 align="center">Sales</h2>
+                <div align="center">   
+                    <button class="buttonBlue" id="buttonSales">Show duties</button>
+                </div> 
+                <h4><div id="divSales"> 
+                    
+                    
+                    <br />
+                    <br />
+                    
+                    
+                    </div></h4>
+                    
+                </div>  
+                
+            
+                <div align="center" class="col-sm-6" style="background-color:lightgray;"> 
+                    
+                    
+                     <img src="../img/prom.png" width="30%">
+                    
+                    <h2 align="center">Promotion</h2>
+                    <div align="center">  
+                <button class="buttonBlue" id="buttonPromot">Show duties</button>
+                    </div>
+                <h4><div id="divPromot"> 
+                    
+                    <br />
+                    <br />
+                    
+                    </div></h4>
+                </div>
+                <!-- end of row -->    
+                </div>    
+
+
+                
+                <div align="center">
+                    <!-- JQUERY to view grades from year 3-->
+                <script>
+                    $(document).ready(function(){
+                    $(".buttony3").click(function(){
+                    $(".div1").html('<img src="../img/year3.png">').toggle();
+                        });
+                    });
+                </script>  
+                
+              
+              
+            </div>
+        </div>
+    
+    
+
+    
+    
+    
+        </body>
+    
+    
+    
+    
+    
+</html>
