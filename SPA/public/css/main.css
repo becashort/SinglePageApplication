@@ -1,0 +1,64 @@
+body {
+    background-color: whitesmoke;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: grey;
+  text-align: center;
+}
+
+
+
+h2.flip,h2.flip2,all,educate
+{
+cursor:pointer;
+}
+
+div.panel,div.panel2,h2.flip,h2.flip2
+{
+line-height: 30px;
+margin:auto;
+font-size:16px;
+padding:5px;
+text-align:center;
+background: lightgray;
+color:black;
+border-radius:3px;
+}
+
+div.panel,div.panel2
+{
+height:auto;
+display:none;
+}
+
+.buttonBlue {
+    background-color: #0099ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttony3, .buttony2, .buttony1 {
+    background-color: lightblue;
+    border-bottom: 1px solid #0099ff;
+    color: cadetblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

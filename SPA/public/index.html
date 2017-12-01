@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+    <head>
+        
+        <!-- title seen on tab -->
+        <title>Short-Span : A short E-Portfolio</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Device set up -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        
+        <!-- ajax/jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		
+		
+        <script>
+        alert("Welcome to my e-portfolio! Try clicking an information header!");
+        </script>  
+
+
+		
+        <!-- JQUERY AJAX to load HTML into content div-->
+		 <script>
+
+        $(document).ready(function(){
+		$("#home").click(function(){
+            $.get("/home", function(data, status){
+		    $("#content").html(data);
+        });
+    });
+});
+            </script>
+			
+			
+		
+            <script>
+
+        $(document).ready(function(){
+		$("#grades").click(function(){
+            $.get("/grades", function(data, status){
+		    $("#content").html(data);
+        });
+    });
+});
+            </script>
+			
+			
+        
+            <script> 
+                
+              /* $(document).ready(function(){
+                    $("#virtual").click(function(){ 
+                    $("#content").load("/virtual"); 
+                 }); 
+               });  */ 
+				
+		$(document).ready(function(){
+		$("#interests").click(function(){
+            $.get("/interests", function(data, status){
+		    $("#content").html(data);
+        });
+    });
+});
+
+            </script>
+        
+            <script>
+
+        $(document).ready(function(){
+		$("#pastWork").click(function(){
+            $.get("/pastWork", function(data, status){
+		    $("#content").html(data);
+        });
+    });
+});
+
+            </script>
+        
+            
+            
+
+        
+    </head>
+
+<!-- 
+name in bold 3d writing top left corner - photoshop-->
+
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+        
+    <!-- ALL BUTTONS ON NAVBAR -->    
+      <li><button type="button" id="home" class="buttonBlue">About Me</button></li>
+      <li><button type="button" id="grades" class="buttonBlue">Grades</button></li>
+      <li><button type="button" id="pastWork" class="buttonBlue">Past Work</button></li>
+      <li><button type="button" id="interests" class="buttonBlue">Interests</button></li>
+    </ul>
+      
+  </div>
+</nav>
+
+
+        
+        <body>
+            
+    
+        <!-- main section -->
+        <div class="container">
+            <div class="jumbotron">
+                
+                <!-- div which will be where html is loaded into -->
+                <div id="content">
+            
+                    
+                
+                    
+<h1 align="center">Welcome to Rebecca Short's online portfolio</h1> 
+                    
+                    <hr />
+                    
+                    
+                    
+     <!-- JQUERY FOR TOGGLING BASIC PROFILE-->
+    <script> 
+                        
+        $(document).ready(function(){
+            $(".flip2").click(function(){
+                $(".panel2").toggle();
+            });
+        });
+        
+    </script>    
+                
+                    
+                    
+<!-- creating two columns in a row -->                    
+<div class="row"> 
+    <!-- first column -->
+    <div class="col-sm-6" style="background-color:lightgray;">
+                    
+        <h2 class="flip2">BASIC PROFILE</h2>
+        
+                    <hr />
+        
+        <!-- centered image -->
+        <div align="center">
+        <img src="img/woman.png" width="30%">
+        </div>    
+        
+        
+<div class="panel2">
+    
+<!-- what information is displayed after button - basic profile is clicked -->    
+<p>Name: Rebecca Short</p>
+<p>Age: 22 years old</p>
+<p>Location: Galway</p>    
+<p>Status: 4th year (Honours) BSC Degree</p>
+<p>Highest Education: 1.1 BSC in Business, Computing and Digital Media</p>    
+</div>
+    </div>    
+    
+
+<!-- JQUERY AJAX FOR TOGGLING PERSONAL DETAILS -->
+    <script> 
+                        
+        $(document).ready(function(){
+            $(".flip").click(function(){
+                $(".panel").toggle();
+            });
+        });
+        
+    </script>    
+    
+    
+    <!-- second column -->
+    <div class="col-sm-6" style="background-color:lightgrey;">            
+            
+                    
+        <h2 class="flip">PERSONAL DETAILS</h2>
+        
+                    <hr />
+        <!-- centered image -->
+        <div align="center">
+        <img src="img/info.png" width="30%">
+        </div>  
+        
+        
+<div class="panel">
+    
+<!-- what information is displayed after button - personal details is clicked -->    
+<p>I received the Student achievement award when graduating in November.</p>
+<p>I was a PASS leader to try and help other students in a lower year.</p>
+<p>I am currently Class Rep of my fourth year class.</p> 
+    <br />
+    <br />
+</div>
+    </div></div>
+	
+	<!-- JAVASCRIPT -->
+	<div align="center">
+	<p>Resources: </p>
+<button type="button" onclick='document.getElementById("img").innerHTML = "All images are taken via Google and I do not own the rights to them."'>Images</button>
+
+<p id="img">
+<br />
+<br />
+</p>
+      </div>              
+                
+
+                
+                <!-- content tag -->
+                </div>
+                </div>
+            
+            
+            
+            
+           
+   
+
+
+    
+    
+    
+        <div class="footer"><strong>Rebecca Short - 4th Year Computing and Digital Media</strong>.
+        </div>
+    
+            <!-- container div -->
+            </div>
+    
+        </body>
+    
+    
+    
+    
+    
+</html>
