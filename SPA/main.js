@@ -48,10 +48,10 @@ app.get('/', function(req, res) {
 });
 
 //setting main root point - USES SENDFILE 
-app.get('/home', function(req, res) {
-	console.log("GET for home route point");
-    res.sendFile(path.join(__dirname + '/public/content/home.html'));
-}); 
+//app.get('/home', function(req, res) {
+//	console.log("GET for home route point");
+//    res.sendFile(path.join(__dirname + '/public/content/home.html'));
+//}); 
 
 //setting up navbar root points - grades - USES SENDFILE
 app.get('/grades', function(req, res) {
