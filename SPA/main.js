@@ -78,9 +78,9 @@ res.send('Hello ' + ' ' + req.params.name + '. Thank you for viewing my Eportfol
 })
 
 //redirect route point
-/* app.delete('/home', function (req, res) {
+app.delete('/home', function (req, res) {
 res.redirect('/');
-}) */
+}) 
 
 //setting up root points 
 app.post('/enter', function (req, res) {
