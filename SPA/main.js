@@ -21,7 +21,7 @@ var bookSchema = new Schema({
 
 var BookData = mongoose.model('BookData', bookSchema);
 
-
+//making my own schema and linking my own API
 // var mongoDB = 'mongodb://becashort:cruisin33@ds161455.mlab.com:61455/information';
 // mongoose.connect(mongoDB);
 
@@ -41,50 +41,57 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 //shows the application which folder to use
 app.use(express.static(path.join(__dirname, 'public')));
 
-//setting main root point
+//setting main root point - USES SENDFILE
 app.get('/', function(req, res) {
 	console.log("GET for / - home route point");
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-//setting main root point
+//setting main root point - USES SENDFILE 
 app.get('/home', function(req, res) {
 	console.log("GET for home route point");
     res.sendFile(path.join(__dirname + '/public/content/home.html'));
 }); 
 
-//setting up navbar root points - grades
+//setting up navbar root points - grades - USES SENDFILE
 app.get('/grades', function(req, res) {
 	console.log("GET for /grades");
     res.sendFile(path.join(__dirname + '/public/content/grades.html'));
 });
 
-//setting up navbar root points - interests
+//setting up navbar root points - interests - USES SENDFILE
 app.get('/interests', function(req, res) {
 	console.log("GET for /interests");
     res.sendFile(path.join(__dirname + '/public/content/interests.html'));
 });
 
-//setting up navbar root points - past work
+//setting up navbar root points - past work - USES SENDFILE
 app.get('/pastWork', function(req, res) {
 	console.log("GET for /pastWork");
     res.sendFile(path.join(__dirname + '/public/content/pastWork.html'));
 });
 
-
+//setting up root points - when user writes route point and name, text is returned - USES SEND
 app.get('/hello/:name', function (req, res) {
 console.log(req.params.name);
 res.send('Hello ' + ' ' + req.params.name + '. Thank you for viewing my Eportfolio. I hope you enjoyed it, this text is produced via get request');
 })
 
-
+//redirect route point
 /* app.delete('/home', function (req, res) {
 res.redirect('/');
 }) */
 
+//setting up root points 
+app.post('/enter', function (req, res) {
+	console.log("post method");
+	console.log(req.body.firstname);
+   res.send('Hello ' + req.body.firstname + " " + req.body.lastname);
+})
 
 
-//read from db
+
+//setting up root points - technology - text from teachers db is returned.
 app.get('/technology', function(req,res){
 	BookData.find(function(err, reviews) {
                 if (err)

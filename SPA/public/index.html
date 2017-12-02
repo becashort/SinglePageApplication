@@ -24,14 +24,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		
 		
-		
+		<!-- JAVASCRIPT ALERT -->
         <script>
         alert("Welcome to my e-portfolio! Try clicking an information header!");
         </script>  
 
 
 		
-        <!-- JQUERY AJAX to load HTML into content div-->
+        <!-- JQUERY to call route points into content div-->
+        <!-- home route point call -->
 		 <script>
 
         $(document).ready(function(){
@@ -44,7 +45,7 @@
             </script>
 			
 			
-		
+		<!-- grades route point call -->
             <script>
 
         $(document).ready(function(){
@@ -57,14 +58,9 @@
             </script>
 			
 			
-        
+        <!-- interests route point call -->
             <script> 
                 
-              /* $(document).ready(function(){
-                    $("#virtual").click(function(){ 
-                    $("#content").load("/virtual"); 
-                 }); 
-               });  */ 
 				
 		$(document).ready(function(){
 		$("#interests").click(function(){
@@ -76,6 +72,8 @@
 
             </script>
         
+        
+        <!-- past work route point call -->
             <script>
 
         $(document).ready(function(){
@@ -94,12 +92,13 @@
         
     </head>
 
-<!-- 
-name in bold 3d writing top left corner - photoshop-->
 
 
+
+
+<!-- start of page -->
 <!-- NAVIGATION BAR -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="nav">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
         
@@ -149,6 +148,7 @@ name in bold 3d writing top left corner - photoshop-->
                     
 <!-- creating two columns in a row -->                    
 <div class="row"> 
+    
     <!-- first column -->
     <div class="col-sm-6" style="background-color:lightgray;">
                     
@@ -210,11 +210,13 @@ name in bold 3d writing top left corner - photoshop-->
 </div>
     </div></div>
 	
-	<!-- JAVASCRIPT -->
+	<!-- JAVASCRIPT button to display text -->
 	<div align="center">
 	<p>Resources: </p>
 <button type="button" onclick='document.getElementById("img").innerHTML = "All images are taken via Google and I do not own the rights to them."'>Images</button>
+<button type="button" onclick='document.getElementById("img").innerHTML = "All code is written by myself."'>Code</button>        
 
+<!-- where img text will be displayed -->        
 <p id="img">
 <br />
 <br />
