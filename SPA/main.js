@@ -48,10 +48,10 @@ app.get('/', function(req, res) {
 });
 
 //setting main root point - USES SENDFILE 
-//app.get('/home', function(req, res) {
-//	console.log("GET for home route point");
-//    res.sendFile(path.join(__dirname + '/public/content/home.html'));
-//}); 
+app.get('/home', function(req, res) {
+	console.log("GET for home route point");
+   res.sendFile(path.join(__dirname + '/public/content/home.html'));
+}); 
 
 //setting up navbar root points - grades - USES SENDFILE
 app.get('/grades', function(req, res) {
@@ -78,16 +78,16 @@ res.send('Hello ' + ' ' + req.params.name + '. Thank you for viewing my Eportfol
 })
 
 //redirect route point
-app.delete('/home', function (req, res) {
-res.redirect('/');
-}) 
+//app.delete('/redirect', function (req, res) {
+//res.redirect('pastWork');
+//}) 
 
 //setting up root points 
-app.post('/enter', function (req, res) {
-	console.log("post method");
-	console.log(req.body.firstname);
-   res.send('Hello ' + req.body.firstname + " " + req.body.lastname);
-})
+//app.post('/enter', function (req, res) {
+	//console.log("post method");
+	//console.log(req.body.firstname);
+   //res.send('Hello ' + req.body.firstname + " " + req.body.lastname);
+//})
 
 
 
